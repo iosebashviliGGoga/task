@@ -1,1 +1,1 @@
-challenge  for redberry bootcamp
+challenge  for redberry bootcamp, created in react.js
