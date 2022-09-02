@@ -1,6 +1,10 @@
 import React from 'react'
 import Redlogo from '../images/redlogo.png'
+import ApiTeam from './ApiCalls/ApiTeam'
+import ApiPosition from './ApiCalls/ApiPosition'
 function User() {
+ 
+  
   return (
     <div className='main'>
     <form className="survey-form">
@@ -18,23 +22,11 @@ function User() {
         </div>
       </div>
      <div className='flex selection '>
-      
-        <select name="" id="" required >
-          <option value="" disabled hidden selected >თიმი</option>
-          <option value="HR">HR</option>
-          <option value="HR">HR</option>
-          <option value="HR">HR</option>
-        </select>
-      
+        <ApiTeam/>
      </div>
      <div className='flex selection'>
       
-        <select name="" id="" required>
-          <option value="" disabled hidden selected>პოზიცია</option>
-          <option value="HR">HR</option>
-          <option value="HR">HR</option>
-          <option value="HR">HR</option>
-        </select>
+        <ApiPosition/>
      </div>
      <div className="flex full">
       <div>

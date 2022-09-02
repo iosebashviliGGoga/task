@@ -5,7 +5,8 @@ import {Link} from 'react-router-dom'
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faAngleLeft} from '@fortawesome/free-solid-svg-icons'
 import Redlogo from '../images/redlogo.png'
-
+import ApiBrand from './ApiCalls/ApiBrand'
+import ApiCpu from './ApiCalls/ApiCpu'
 import AcceptMaxFiles from './AcceptMaxFiles'
 function LaptopInfo() {
   return (
@@ -35,23 +36,13 @@ function LaptopInfo() {
                 </div>
 
                 <div className='justflex'>
-                  <select name="" id="" required >
-                    <option value="" disabled hidden selected >ლეპტოპის ბრენდი</option>
-                    <option value="HR">HR</option>
-                    <option value="HR">HR</option>
-                    <option value="HR">HR</option>
-                  </select>
+                  <ApiBrand/>
                 </div>
             </div>
             
             <div className="flex-items flex3 line">
               <div className="">
-                  <select name="" id="" required >
-                    <option value="" disabled hidden selected >CPU</option>
-                    <option value="HR">HR</option>
-                    <option value="HR">HR</option>
-                    <option value="HR">HR</option>
-                  </select>
+                  <ApiCpu/>
               </div>
               <div className="">
                   <label>CPU-ს ბირთვი</label>

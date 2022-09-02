@@ -6,12 +6,12 @@ import { faAngleLeft} from '@fortawesome/free-solid-svg-icons'
 import User from './User'
 
 function AddUser() {
-  const [isActive, setIsActive] = useState(true);
+  
 
-  const handleClick = event => {
+  //const handleClick = event => {
     // 👇️ toggle isActive state on click
     
-  };
+  //};
   return (
     <>
       <Link to='/'>
