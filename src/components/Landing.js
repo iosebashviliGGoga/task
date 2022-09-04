@@ -19,7 +19,7 @@ function Landing() {
              <Link to='/add'>
               <button className='add'> ჩანაწერის დამატება</button>
              </Link>
-             <Link to='/List'>
+             <Link to='/laptops'>
               <button className='list'> ჩანაწერების ნახვა</button>
              </Link>
           </div>

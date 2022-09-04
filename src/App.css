@@ -165,14 +165,18 @@ label ,input{
     background-color:  #FFFFFF;
   }
   input{
+    padding: 5px 0 5px 20px;
     height: 50px;
-    
+    padding-left: 20px;
     border-radius: 5px;
     border-width: 3px;
     border-color: #8AC0E2;
     font-weight: 500;
     font-size: 30px;
     line-height: 21px;
+  }
+  input:focus{
+    background-color: #2B4BF20F;
   }
   ::-webkit-input-placeholder { /* Edge */
     padding: 5px 0 5px 20px;
@@ -244,6 +248,9 @@ label ,input{
   }
   option{
     background: #FFFFFF;
+  }
+  option:hover{
+    background-color: blue;
   }
 
  .selection{
@@ -479,6 +486,34 @@ cursor: pointer;
   align-self: center;
   cursor: pointer;
 }
+
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon > i {
+  position: absolute;
+  display: block;
+  transform: translate(0, -50%);
+  top: 50%;
+  pointer-events: none;
+  background-color: transparent;
+  text-align: center;
+  font-style: normal;
+}
+
+
+
+.input-icon-right > i {
+  font-size: 50px;
+  right: 5%;
+  bottom: 20%;
+  color: #797979;
+}
+
+
+
 @media only screen and (max-width: 1000px){
     /*      landing     */
 .biglogo{

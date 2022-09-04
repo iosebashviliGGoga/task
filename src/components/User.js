@@ -1,23 +1,49 @@
 import React from 'react'
+import { useState } from 'react'
 import Redlogo from '../images/redlogo.png'
 import ApiTeam from './ApiCalls/ApiTeam'
 import ApiPosition from './ApiCalls/ApiPosition'
 function User() {
- 
-  
+  const [name, setName] = useState('');
+  const [surname, setSurname] = useState('');
+  const [nameErr, setNameErr] = useState(false);
+  const [surnameError, setSurnameError] = useState(false);
+  /* it has to be deleted */
+  const validName = new RegExp(
+    '([ა-ჰ])'
+ );
+ const validSurname = new RegExp('^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}$');
+
+ const validate = () => {
+    if (!validName.test(name)) {
+       setNameErr(true);
+    }
+    if (!validSurname.test(surname)) {
+       setSurnameError(true);
+    }
+ };
+
   return (
     <div className='main'>
     <form className="survey-form">
       <div className='flex sized'>
         <div>
           <label>სახელი</label>
-          <input type="text" placeholder='გრიშა' required/>
-          <small>მინიმუმ 2 სიმბოლო, ქართული ასოები</small>
+          <input type="text"
+                 placeholder='გრიშა'
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required/>
+          <small>მინიმუმ 2 სიმბოლო, ქართული ასოები {name}</small>
         </div>
         
         <div>
           <label>გვარი</label>
-          <input type="text" placeholder='ონიანი' required/>
+          <input type="text"
+           placeholder='ონიანი'
+           value={surname}
+           onChange={(e) => setSurname(e.target.value)}
+            required/>
           <small>მინიმუმ 2 სიმბოლო, ქართული ასოები</small>
         </div>
       </div>
