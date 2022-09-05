@@ -522,4 +522,19 @@ cursor: pointer;
 .smalllogo{
     display: block;
 }
+.buttons button{
+  width: 300px;
+}
+.flex{
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
 }

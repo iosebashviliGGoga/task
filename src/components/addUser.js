@@ -61,7 +61,7 @@ if (!validMobile.test(mobile)) {
        if(mobile){ sessionStorage.setItem('mobile', JSON.stringify(mobile));}
     
   setMobile(JSON.parse(sessionStorage.getItem('mobile')));}}
-//saving to session storage
+
 
 
 
@@ -162,11 +162,23 @@ if (!validMobile.test(mobile)) {
   )
        
         
-          <div className="toLaptop" onClick={validate}>შემდეგი</div>
-        
-  
+          <div className="toLaptop" onClick={validate}>
+            {(!nameErr && !surnameError && !gmailErr && !mobileErr && sessionStorage.getItem('team') && sessionStorage.getItem('position')) ?
+                <Link to='/add/laptopinfo'>"შემდეგი"</Link>  :  "შემდეგი"}</div>
+          
+
     </>
   )
 }
+/* const [name, setName] = useState('');
+  const [surname, setSurname] = useState('');
+  const [gmail,setGmail] = useState('');
+  const [mobile, setMobile] = useState('');
+
+
+  const [gmailErr, setGmailErr] = useState(false);
+  const [mobileErr, setMobileErr] = useState(false)
+  const [nameErr, setNameErr] = useState(false);
+  const [surnameError, setSurnameError] = useState(false); */
 
 export default AddUser

@@ -9,7 +9,7 @@ function Laptops() {
     try { axios.get('https://pcfy.redberryinternship.ge/api/laptops',
                     {params: {token : 'ac0bc3ebe127cebb7fd8fd03cfad3a29' } }).then(res => {
       setUserList(res.data.data);
-      console.log(res.data)
+      console.log(res)
       
     });
   }
